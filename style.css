@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+:root {
+    --color-main: #6E00FF;
+    --color-secondary: #FFB100;
+    --bg-body: #f8f8fb;
+    --main-accent: #6307E2;
+    --main-text: #8492a6;
+    --success: #28A745;
+    --danger: #DC3545;
+    --shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+html{
+    overflow-x: hidden ;
+    font-size: 62.5%;
+}
+*{
+    font-family: 'Nunito', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    transition: all 0.2s linear;
+    font-size: 1.6rem;
+}
+body {
+    color: var(--main-text);
+    background: var(--bg-body);
+}
+#menu-toggle {
+    display: none;
+}
+.hide{
+   display: none;
+}
+.page-wrapper {
+    width: 93%;
+    margin: auto;
+    display: flex;
+}
+.page-wrapper::before {
+    content: "";
+    width: 100%;
+    height: 42rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--color-main);
+    z-index: -1;
+    border-radius: 0 0 0 10rem;
+}
+.las.la-times{
+    display: none;
+}
+.sidebar {
+   width: 25rem;
+    margin-left: 4rem;
+}
+.brand {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+}
+.brand h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+.brand h3 span{
+    font-size: 3rem;
+}
+.profile-card {
+    text-align: center;
+    margin: 2rem 0;
+}
+.profile-img {
+   height: 12rem;
+   width: 12rem;
+   border-radius: 50%;
+   margin: auto;
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin-bottom: 2rem;
+}
+.profile-info {
+   color: #fff;
+}
+.profile-info h2 {
+   margin-bottom: .3rem;
+   font-size: 2.4rem;
+}
+.profile-info small {
+    font-size: 1.6rem;
+}
+.profile-action {
+   margin: 1.7rem 0;
+}
+.btn {
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    padding: .6rem 2rem;
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-white {
+    background: #fff;
+}
+.btn span {
+    font-size: 1.8rem;
+    display: block;
+   
+}
+.profile-icons {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 5rem;
+}
+.profile-icons span {
+   display: inline-block;
+   color: #fff;
+   font-size: 2rem
+}
+.sidebar-menu{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    place-items: center;
+    gap: 3rem 0;
+    margin-top: 5rem;
+}
+.menu-item {
+   padding: 1rem 1.6rem;
+   border-radius: .6rem;
+}
+.menu-item.active{
+    background-color: var(--color-main);
+}
+.menu-item.active a{
+    color: #fff;
+    
+}
+.menu-item a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.menu-item a .las{
+    font-size: 2.4rem;
+}
+.sidebar-card{
+    background-color: var(--color-secondary);
+    color:#fff;
+    padding: 1.2rem;
+    border-radius: .8rem;
+    margin-top: 3rem;
+}
+.sidebar-card h2{
+    text-transform: capitalize;
+}
+.sidebar-card p{
+    word-spacing: 0.4rem;
+    line-height: 1.9;
+    margin: .6rem 0;
+}
+.main-content{
+    padding: 0 6rem;
+    flex: 1;
+}
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+    border-bottom: 1px solid var(--main-text);
+    padding-bottom: 1rem;
+}
+header label span{
+    font-size: 2.6rem;
+    color: #fff;
+    cursor: pointer;
+}
+.head-icons{
+    display: flex;
+    align-items: center;
+}
+.head-icons > *{
+    margin-right: 1.8rem;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.head-avatar{
+    display: flex;
+    align-items: center;
+}
+.head-avatar div{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    margin-right: 0.4rem;
+}
+main{
+    margin-top: 2rem;
+}
+.page-header > *{
+    display: block;
+    color: #fff;
+    font-size: 2.6rem;
+}
+.page-header small{
+    font-size: 1.3rem;
+}
+.analytics {
+   display: grid;
+    grid-template-columns: 64% auto;
+    grid-gap: 2rem;
+    margin-top: 3rem;
+
+}
+.card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+.card-head{
+    color: #555;
+    font-weight: 800;
+    padding: .8rem 2rem;
+    border-bottom: 1px solid #ccc;
+}
+.card-head h3{
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.chart-wrapper{
+    margin-top: 2rem;
+}
+#emailChart{
+    margin-top: 3.2rem;
+}
+.grid-2 {
+    display: grid;
+    grid-template-columns: 64% auto;
+    grid-gap: 2rem;
+    margin-top: 3rem;
+}
+img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+}
+table{
+    min-width: 100%;
+    border-collapse: collapse;
+}
+table tr{
+    border-bottom: 1px solid #efefef;
+}
+table tr th{
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+table tr th,
+table tr td{
+    padding: 1.6rem;
+}
+.team-info {
+   display: flex;
+    align-items: center;
+}
+.team-img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 8px;
+   background: var (--bg-body);
+   margin-right: .7rem;
+   padding: .8rem;
+   border-radius: 100%;
+   overflow: hidden;
+}
+table h4{
+    color: #222;
+    font-weight: bolder;
+}
+.progress-bar{
+    width: 100%;
+    height: 1rem;
+    background-color: #efefef;
+    border-radius: 1rem;
+}
+.indicator{
+    width: 100%;
+    border-radius: 1rem;
+    
+}
+.progress-bar .success{
+    height: 100%;
+    background-color: var(--success);
+}
+.progress-bar .danger{
+    height: 100%;
+    background-color: var(--danger);
+}
+.progress-bar .warning{
+    height: 100%;
+    background-color: rgb(199, 147, 5);
+}
+.btn-main{
+    background-color: var(--color-main);
+    color: #fff;
+}
+.team-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.team-head select{
+    border: none;
+    outline: none;
+    background-color: #efefef;
+    padding: 0.3rem 1rem;
+}
+.card-body{
+    padding: 0.6rem 1rem;
+}
+.compete-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.6rem;
+}
+.compete-info img{
+    width: 9rem;
+    height: 5rem;
+    border-radius: 0.8rem;
+    margin-right: 4px;
+}
+.compete-info h4{
+    color: #222;
+    font-weight: 600;
+    font-size: 1.72rem;
+}
+.compete-info small{
+    font-size: 1.3rem;
+}
+.compete-details{
+    margin-right: .4rem;
+}
+.compete-sales{
+    font-size: 0.8rem;
+}
+.compete-sales h3{
+    color: #222;
+}
+@media screen and (max-width: 1023px) {
+    html{
+        font-size: 57.5%;
+    }
+    .analytics, .grid-2{
+        grid-template-columns: 100%;
+    }
+    .main-content{
+        padding: 0 1rem;
+    }
+    .las.la-times{
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 2.4rem;
+        color: #fff;
+    }
+    .sidebar{
+        display: none;
+        position: fixed;;
+        top: 0;
+        left: 0;
+        width: 27rem;
+        padding: 2rem;
+        height: 100%;
+        z-index: 1;
+        margin: 0;
+        box-shadow: var(--shadow);
+        background-color: #fff;
+        background-color: #6307E2;
+    }
+    .menu-item a span{
+        color: #fff;
+    }
+    .hide{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    html{
+        font-size: 50.5%;
+    }
+}
+@media screen and (max-width: 450px) {
+    html{
+        font-size: 42%;
+    }
+}
